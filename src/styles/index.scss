@@ -1,0 +1,59 @@
+@use 'globals' as g;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: g.$light-gray;
+  overflow-x: hidden;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+  }
+
+  a:hover {
+    color: g.$light-gray;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-content {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-size-medium {
+  font-size: 2rem;
+}
+
+

@@ -1,0 +1,130 @@
+@use 'globals' as g;
+
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 50vh;
+    padding: 3rem 0;
+    color: g.$black;
+
+    .title {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .icon-container, .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 0 30%;
+        height: 100%;
+        width: 100%;
+        margin: 2rem;
+    }
+
+    .icon-container {
+        align-items: center;
+    }
+    
+    .icon-container svg{
+        max-width: 15rem;
+        fill: g.$black;
+    }
+
+    .cta {
+        padding: 1rem 0 0 0;
+        margin: 1rem 0 0 0;
+    }
+
+    .cta-button {
+        transition: all .5s;
+        padding: 1rem 2rem;
+        color: g.$black;
+        text-decoration: none;
+        border: solid 3px g.$black;
+        border-radius: 40px;
+    }
+
+    .cta-button:hover {
+        color: g.$red;
+        border-color: g.$red;
+    }
+
+    .optional {
+        color: g.$black;
+        margin-bottom: 1rem;
+    }
+
+    .excerpt {
+        a {
+            text-decoration: underline;
+        }
+        a:hover {
+            color: g.$red;
+            text-decoration: none;
+        }
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 768px) {
+   .top-down {
+        flex-direction: column !important;
+
+        .text-container {
+            width: 30%;
+            text-align: center;
+        }
+    } 
+}
+
+
+.dark {
+    // background-color: g.$dark-gray !important;
+    background-color: g.$black !important;
+    color: white !important;
+
+    .icon-container svg{
+        fill: white !important;
+    }
+
+    .cta-button {
+        color: white;
+        border: solid 3px white;
+    }
+
+    .optional {
+        color: g.$light-gray;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .block {
+        height: auto !important;
+        max-height: unset;
+        flex-direction: column !important;
+
+        .icon-container svg {
+            max-width: 30%;
+        }
+
+        .title, .excerpt, .bullets, .text,.optional {
+            margin: 0 1rem;
+        }
+
+        .cta {
+            align-self: center;
+        }
+
+        .title {
+            font-size: 2rem;
+        }
+    }
+}
+

@@ -1,0 +1,51 @@
+@use 'globals' as g;
+
+.form-container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.form-row {
+    margin: 1rem 0;
+}
+
+.cta-button {
+    transition: all .5s;
+    padding: 1rem 2rem;
+    color: g.$dark-gray;
+    text-decoration: none;
+    border: solid 3px #585a5b;
+    border-radius: 40px;
+}
+
+.cta-button:hover {
+    color: g.$red;
+    border-color: g.$red;
+}
+
+.form-container .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+
+    .form-row {
+        margin: 1rem;
+    }
+}

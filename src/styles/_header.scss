@@ -1,0 +1,95 @@
+@use 'globals' as g;
+
+.row, .header {
+    background-color: g.$black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 70%;
+    padding: 1rem 0;
+}
+
+.row-item { 
+    color: g.$white;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.row-item:hover { 
+    color: g.$light-gray;
+}
+
+.mobile-header {
+    display: none;
+    height: 4rem;
+}
+
+.mobile-menu {
+    opacity: 1;
+    transition: all 1s;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1000;
+    background-color: g.$black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    .mobile {
+        padding: 1rem 0;
+        flex: 1 1 10%;
+    }
+}
+
+.hidden {
+    opacity: 0 !important;
+}
+
+.zero-height {
+    height: 0!important;
+}
+
+.burger-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    opacity: 1;
+    z-index: 9999;
+    margin: 0;
+}
+
+.burger-icon svg {
+    fill: white !important;
+}
+
+.burger {
+    padding: 1rem;
+    position: relative;
+}
+
+@media  screen and (max-width: 762px){
+    .desktop {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .mobile-header {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
