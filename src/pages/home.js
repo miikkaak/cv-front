@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
-import profilePic from "../img/profile.jpg";
-import heroPicture from "../img/hero-bg.jpg";
+import profilePic from "../img/profile.webp";
+import heroPicture from "../img/hero-bg.webp";
 import { ReactComponent as Computer} from "../img/computer.svg";
 import { ReactComponent as About} from "../img/about.svg";
 import { ReactComponent as Arrow} from "../img/arrow-down.svg";

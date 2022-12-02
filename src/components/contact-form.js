@@ -26,15 +26,30 @@ const ContactForm = () => {
                 message: message.current.value
             }
 
-            console.log(name.current.value, email.current.value, phone.current.value, message.current.value);
             try {
                 submitFormData(data)
                     .then((res) => {
-                        console.log('response: ', res);
-                        setServerMessage(res);
+                        if (res.error) {
+                            setServerMessage(res.error.includes('email') ? res.error : 'Something went wrong');
+                            setSuccess(false);
+                            return;
+                        }
+
+                        if (res.message == false) {
+                            setServerMessage('Something went wrong');
+                            setSuccess(false);
+                            return;
+                        }
+
+                        setServerMessage(res.message);
+                        setSuccess(true);
+                        name.current.value = '';
+                        email.current.value = '';
+                        phone.current.value = '';
+                        message.current.value = '';
                     });
             } catch (error) {
-                console.log(error);
+                // console.log(error);
                 setServerMessage(error);
             }
         }       
@@ -117,8 +132,8 @@ const ContactForm = () => {
                         <a className="cta-button" onClick={submitForm}>Submit</a>
                     </div>
                     { serverMessage != null &&
-                        <div className='form-row'>
-                            { success ? 'Your message is submitted successfully!': 'Something went wrong! Please try again later.'}
+                        <div className='form-row' style={{alignSelf:"center"}}>
+                            { success ? 'Your message was submitted successfully!': serverMessage}
                         </div>
                     }
                 </FormControl>
