@@ -8,6 +8,7 @@ import { ReactComponent as Arrow} from "../img/arrow-down.svg";
 import { ReactComponent as Career } from "../img/career.svg";
 import "../styles/_home.scss"
 import Block from "../components/block";
+import OneColumnBlock from "../components/block-one-column";
 
 function Home() {
     return (
@@ -48,7 +49,7 @@ function Home() {
                             isLeft={true}
                             title="whoami"
                             bullets={["Fullstack Developer (Javascript stack mainly)", "Cyber Security MsC student @JYU", "B.A. in Information Systems Science", "Full-time Nerd"]}
-                            excerpt="Here is some key information about my skills and experience"
+                            excerpt="Here is some key information about me and my expertise"
                             text="More information about my abilities and experience can be found in  Excperience and Education pages"
                             ctaText={'XP'}
                             ctaLink={"/experience"}
@@ -72,7 +73,15 @@ function Home() {
                             excerpt="As I have started progressing in my career path, I have recognized some ambitions regarding my future direction"
                             text="I enjoy software development in all its forms and would not mind continuing to produce some robust solutions. That being said, I'd like to shift my focus more into cyber security field as my studies progress and I get more experience pwning THM and HTB machines. Fortunately, these ambitions don't counter each other!"
                         />
-
+                        <OneColumnBlock 
+                            id="cta"
+                            isDark={false}
+                            title="Get familiar with me"
+                            excerpt="There is more information about my experience, education and projects on other pages of this website. Check them out and contact me if I managed to spark your interest!"
+                            text="You can start by checking out my relevant experience"
+                            ctaText={'Experience'}
+                            ctaLink={"/experience"}
+                        />
                         
                 </div>
                 

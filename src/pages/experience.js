@@ -22,7 +22,7 @@ function Experience() {
                 <OneColumnBlock 
                     id="bluf"
                     isDark={true}
-                    title="BlufVPN OU"
+                    title="BlufVPN OÜ"
                     optional="2022-present"
                     excerpt="In this multi-national work environment, I work as a fullstack developer producing web solutions for both business and consumer clients. Developing and maintaining company web applications is my key responsibilty. Some highlights of my path with BlufVPN are:"
                     bullets={["Built a highly customized SEO-optimized website driving traffic to customer's product page", "Built numerous new components to customer's admin portal providing customizability, customer engagement and key information about product usage", "Provided new solutions to company's website which improved page analytics, product launches, and customer satisfaction"]}
