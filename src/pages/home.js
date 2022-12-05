@@ -19,6 +19,7 @@ function Home() {
                     <div className="hero-overlay">
                         <img 
                             src={heroPicture}
+                            alt="hero picture"
                         />
                     </div>
                     <div className="content">
@@ -28,13 +29,14 @@ function Home() {
                             <div className="hero-picture">
                                 <img 
                                     src={profilePic}
+                                    alt="profile picture"
                                 />
                             </div>
                             <div className="hero-excerpt">
                                 <p>Am I your next specialist to enhance your organization's vital development processes? Get to know me below and let's get in touch!</p>
                             </div>
                             <div className="arrow">
-                                <a className="arrow-link" href="#key-points">
+                                <a className="arrow-link" href="#key-points" aria-label="To content">
                                     {<Arrow />}
                                 </a>
                             </div>
@@ -48,7 +50,7 @@ function Home() {
                             isDark={true}
                             isLeft={true}
                             title="whoami"
-                            bullets={["Fullstack Developer (Javascript stack mainly)", "Cyber Security MsC student @JYU", "B.A. in Information Systems Science", "Full-time Nerd"]}
+                            bullets={["Fullstack Developer (Javascript stack mainly)", "Cyber Security MsC student @JYU", "B.S. in Information Systems Science", "Full-time Nerd"]}
                             excerpt="Here is some key information about me and my expertise"
                             text="More information about my abilities and experience can be found in  Excperience and Education pages"
                             ctaText={'XP'}
